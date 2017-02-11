@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C9B27AE-C0D3-4C5D-86E7-C05FACD3B0FE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Design_Patterns</RootNamespace>
+    <AssemblyName>Design Patterns</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractFactory\AfricaFactory.cs" />
+    <Compile Include="AbstractFactory\AmericaFactory.cs" />
+    <Compile Include="AbstractFactory\AnimalWorld.cs" />
+    <Compile Include="AbstractFactory\Bison.cs" />
+    <Compile Include="AbstractFactory\Carnivore.cs" />
+    <Compile Include="AbstractFactory\ContinentFactory.cs" />
+    <Compile Include="AbstractFactory\Herbivore.cs" />
+    <Compile Include="AbstractFactory\Lion.cs" />
+    <Compile Include="AbstractFactory\MainApp.cs" />
+    <Compile Include="AbstractFactory\Wildebeast.cs" />
+    <Compile Include="AbstractFactory\Wolf.cs" />
+    <Compile Include="Adapter\ChemicalBank.cs" />
+    <Compile Include="Adapter\Compound.cs" />
+    <Compile Include="Adapter\MainApp.cs" />
+    <Compile Include="Adapter\RichCompound.cs" />
+    <Compile Include="CommandPattern\Account.cs" />
+    <Compile Include="CommandPattern\Deposit.cs" />
+    <Compile Include="CommandPattern\ITransaction.cs" />
+    <Compile Include="CommandPattern\TransactionManager.cs" />
+    <Compile Include="CommandPattern\Transfer.cs" />
+    <Compile Include="CommandPattern\Withdraw.cs" />
+    <Compile Include="Composite\CompositeElement.cs" />
+    <Compile Include="Composite\DrawingElement.cs" />
+    <Compile Include="Composite\MainApp.cs" />
+    <Compile Include="Composite\PrimitiveElement.cs" />
+    <Compile Include="DataMapperPattern\Customer.cs" />
+    <Compile Include="DataMapperPattern\CustomerDataMapper.cs" />
+    <Compile Include="FacadePattern\EmailCreator.cs" />
+    <Compile Include="FacadePattern\EmailFacade.cs" />
+    <Compile Include="FacadePattern\IEmailFluentInterface.cs" />
+    <Compile Include="FactoryPattern\FlyingMonster.cs" />
+    <Compile Include="FactoryPattern\LandMonster.cs" />
+    <Compile Include="FactoryPattern\Monster.cs" />
+    <Compile Include="FactoryPattern\MonsterFactory.cs" />
+    <Compile Include="FactoryPattern\Player.cs" />
+    <Compile Include="FactoryPattern\PlayerFactory.cs" />
+    <Compile Include="FactoryPattern\SeaMonster.cs" />
+    <Compile Include="Iterator\Collection.cs" />
+    <Compile Include="Iterator\IAbstractionCollection.cs" />
+    <Compile Include="Iterator\IAbstractIterator.cs" />
+    <Compile Include="Iterator\Item.cs" />
+    <Compile Include="Iterator\Iterator.cs" />
+    <Compile Include="Iterator\MainApp.cs" />
+    <Compile Include="Observer\IBM.cs" />
+    <Compile Include="Observer\IInvestor.cs" />
+    <Compile Include="Observer\Investor.cs" />
+    <Compile Include="Observer\MainApp.cs" />
+    <Compile Include="Observer\Stock.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy\IMath.cs" />
+    <Compile Include="Proxy\MainApp.cs" />
+    <Compile Include="Proxy\Math.cs" />
+    <Compile Include="Proxy\MathProxy.cs" />
+    <Compile Include="SingletonPattern\Customer.cs" />
+    <Compile Include="SingletonPattern\Logger.cs" />
+    <Compile Include="SingletonPattern\StaticLogger\StaticLogger.cs" />
+    <Compile Include="StrategyPattern\AverageByMean.cs" />
+    <Compile Include="StrategyPattern\AverageByMedian.cs" />
+    <Compile Include="StrategyPattern\Calculator.cs" />
+    <Compile Include="StrategyPattern\IAverage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
